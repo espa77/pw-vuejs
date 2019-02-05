@@ -1,0 +1,11 @@
+language: node_js
+
+node_js:
+- node
+
+jobs:
+  include:
+    - stage: deploy_pw-vuejs
+      script: ./deploy/pw-vuejs.sh
+    - stage: deploy_lambda-functions
+      script: ./deploy/lambda-functions.sh
